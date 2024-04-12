@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "85908A59-1C8A-4441-A5A8-376552FD4504",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:iTunes2.xcodeproj",
+      "identifier" : "2C431E822A91123200F7CE8C",
+      "name" : "iTunes2"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:iTunes2.xcodeproj",
+        "identifier" : "2C431E982A91123500F7CE8C",
+        "name" : "iTunes2Tests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:iTunes2.xcodeproj",
+        "identifier" : "2C431EA22A91123500F7CE8C",
+        "name" : "iTunes2UITests"
+      }
+    }
+  ],
+  "version" : 1
+}

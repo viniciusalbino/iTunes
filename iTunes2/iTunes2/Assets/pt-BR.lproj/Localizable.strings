@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  iTunes2
+
+  Created by Vinicius Albino on 19/08/23.
+  
+*/
+"hello" = "Olá";
+"world" = "Mundo!";
+"Error" = "Erro";
+"There was an error on loading content." = "Ocorreu um erro ao carregar o conteúdo.";

@@ -16,4 +16,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Build
         run: | 
-          rake -f scripts/Rakefile build
+          cd iTunes2/scripts
+          rake -f Rakefile build

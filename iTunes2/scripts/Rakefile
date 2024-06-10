@@ -1,0 +1,16 @@
+require 'rake'
+
+desc 'Ensure all gems are intalled'
+task :install_gems do
+    check_gems = system('bundle check')
+    unless check_gems
+        sh 'bundle install'
+    end
+end
+
+desc 'Build for simulator'
+task build: :install_gems do
+    # destination = "platform=iOS Simulator,name=iPhone 15,OS= 17.5"
+    destination = "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5"
+    sh "set -o pipefail && xcodebuild -project ../iTunes2.xcodeproj -scheme iTunes2 -destination \"#{destination}\" build | xcpretty"
+end

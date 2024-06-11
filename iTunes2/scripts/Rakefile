@@ -10,8 +10,7 @@ end
 
 desc 'Build for simulator'
 task build: :install_gems do
-    # destination = "platform=iOS Simulator,name=iPhone 15,OS= 17.5"
     destination = "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5"
-    # sh "set -o pipefail && xcodebuild -project ../iTunes2.xcodeproj -scheme iTunes2 -destination \"#{destination}\" build | xcpretty"
-    sh "set -o pipefail && xcodebuild -project ../iTunes2.xcodeproj -scheme iTunes2 -destination \"#{destination}\" build | xcbeautify --renderer github-actions"
+    sh "set -o pipefail && xcodebuild -project ../iTunes2.xcodeproj -scheme iTunes2 -destination \"#{destination}\" test | xcbeautify --renderer github-actions"
+    # sh "set -o pipefail && xcodebuild -project ../iTunes2.xcodeproj -scheme iTunes2 -destination \"#{destination}\" test | xcbeautify "
 end
